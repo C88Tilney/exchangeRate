@@ -1,6 +1,7 @@
 
 //event listeners on page load
 window.addEventListener("load", gbpRate, false);
+window.addEventListener("load", start, false);
 
 //GBP exchange rate on the load of page
 function gbpRate() {
@@ -15,16 +16,15 @@ function gbpRate() {
             var usd = gbp.rates.USD;
             var eur = gbp.rates.EUR;
             console.log(eur);
-            document.getElementById("dollar").innerHTML = usd;
-            document.getElementById("euro").innerHTML = eur;
+            document.getElementById("dollar").innerHTML = usd +" USD";
+            document.getElementById("euro").innerHTML = eur + " EUR";
         }
     };
     xmlhttp.open("GET", gbpBaseRate, true);
     xmlhttp.send();
 };
 
-//ADD EVENT LISTENERS
-window.addEventListener("load", start, false);
+//User Input to start function
 
 function start() {
     document.getElementById("submit").addEventListener("click", loadData, false);
@@ -55,6 +55,7 @@ function loadData() {
             var calculation = dis * fromAmount;
             var UserUsd = myArr.rates.USD;
             var UserEur = myArr.rates.EUR;
+            var UserGbp = myArr.rates.GBP;
             console.log(calculation);
             document.getElementById("toAmount").value = calculation;
 
@@ -62,9 +63,19 @@ function loadData() {
             document.getElementById("userChoice").innerHTML = "1 " + fromCurr + " = ";
             
             console.log(UserEur);
+            
+            if( fromCurr == "USD" ) {
+                document.getElementById("userUs").innerHTML =  UserGbp + " GBP";
+                document.getElementById("userEur").innerHTML = UserEur + " EUR";
+            }
+            else if ( fromCurr == "EUR") {
+                document.getElementById("userEur").innerHTML = UserGbp +" GBP";
+                document.getElementById("userUs").innerHTML = UserUsd + " USD";
+            }
+            else {
             document.getElementById("userUs").innerHTML = UserUsd + " USD";
             document.getElementById("userEur").innerHTML = UserEur + " EUR";
-
+            }
         };
     };
     xmlhttp.open("GET", url, true);
