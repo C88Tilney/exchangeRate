@@ -1,10 +1,25 @@
+<!DOCTYPE html>
 <html>
 
 <head>
     <title>Currency Converter</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Currency Converter">
 
+    <!-- favicon  in tab -->
+    <link rel="icon" href="../../img/2logo.png">
+
+    <!-- My Custom CSS -->
+    <link href="cssExchange.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts and icons -->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
 
 </head>
 
@@ -13,102 +28,106 @@
         <h1>Currency Converter</h1>
     </div>
     <div class="UserExchange">
-    <div class="to">
-        <input id="fromAmount" type="number" value="1">
-        <select id="from">
-            <option value='AUD' title='Australian Dollar'>AUD: Australian Dollar</option>
-            <option value='BGN' title='Bulgarian lev'>BGN: Bulgarian lev</option>
-            <option value='BRL' title='Brazilian real'>BRL: Braxilian real</option>
-            <option value='CAD' title='Canadian Dollar'>CAD: Canadian Dollar</option>
-            <option value='CHF' title='Swiss franc'>CHF: Swiss franc</option>
-            <option value='CNY' title='Chinese yuan'>CNY: Chinese yuan renminbi</option>
-            <option value='CZK' title='Czech Republic Koruna'>CZK: Czech Republic Koruna</option>
-            <option value='DKK' title='Danish Krone'>DKK: Danish Krone</option>
-            <option value='GBP' title='British Pound Sterling' selected>GBP: British Pound Sterling</option>
-            <option value='EUR' title='Euro'>EUR: Euro</option>
-            <option value='HKD' title='Hong Kong Dollar'>HKD: Hong Kong Dollar</option>
-            <option value='HRK' title='Croatian Kuna'>HRK: Croatian Kuna</option>
-            <option value='HUF' title='Hungarian Forint'>HUF: Hungarian Forint</option>
-            <option value='IDR' title='Indonesian Rupiah'>IDR: Indonesian Rupiah</option>
-            <option value='ILS' title='Israeli New Sheqel'>ILS: Israeli New Sheqel</option>
-            <option value='INR' title='Indian Rupee'>INR: Indian Rupee</option>
-            <option value='JPY' title='Japanese Yen'>JPY: Japanese Yen</option>
-            <option value='KRW' title='South Korean Won'>KRW: South Korean Won</option>
-            <option value='MXN' title='Mexican Peso'>MXN: Mexican Peso</option>
-            <option value='MYR' title='Malaysian Ringgit'>MYR: Malaysian Ringgit'</option>
-            <option value='NOK' title='Norwegian Krone'>NOK: Norwegian Krone</option>
-            <option value='NZD' title='New Zealand Dollar'>NZD: New Zealand Dollar</option>
-            <option value='PHP' title='Philippine Peso'>PHP: Philippine Peso</option>
-            <option value='PLN' title='Polish Zloty'>PLN: Polish Zloty</option>
-            <option value='RUB' title='Russian Ruble'>RUB: Russian Ruble</option>
-            <option value='SEK' title='Swedish Krona'>SEK: Swedish Krona</option>
-            <option value='SGD' title='Singapore Dollar'>SGD: Singapore Dollar</option>
-            <option value='THB' title='Thai Baht'>THB: Thai Baht</option>
-            <option value='TRY' title='Turkish Lira'>TRY: Turkish Lira</option>
-            <option value='USD' title='United States Dollar'>USD: United States Dollar</option>
-            <option value='ZAR' title='South African Rand'>ZAR: South African Rand</option>
-        </select>
-    </div>
+        <div class="to">
+            <input id="fromAmount" type="number" value="1" autofocus>
+            <select id="from">
+                <option value='AUD' title='Australian Dollar'>AUD: Australian Dollar</option>
+                <option value='BGN' title='Bulgarian lev'>BGN: Bulgarian lev</option>
+                <option value='BRL' title='Brazilian real'>BRL: Braxilian real</option>
+                <option value='CAD' title='Canadian Dollar'>CAD: Canadian Dollar</option>
+                <option value='CHF' title='Swiss franc'>CHF: Swiss franc</option>
+                <option value='CNY' title='Chinese yuan'>CNY: Chinese yuan renminbi</option>
+                <option value='CZK' title='Czech Republic Koruna'>CZK: Czech Republic Koruna</option>
+                <option value='DKK' title='Danish Krone'>DKK: Danish Krone</option>
+                <option value='GBP' title='British Pound Sterling' selected>GBP: British Pound Sterling</option>
+                <option value='EUR' title='Euro'>EUR: Euro</option>
+                <option value='HKD' title='Hong Kong Dollar'>HKD: Hong Kong Dollar</option>
+                <option value='HRK' title='Croatian Kuna'>HRK: Croatian Kuna</option>
+                <option value='HUF' title='Hungarian Forint'>HUF: Hungarian Forint</option>
+                <option value='IDR' title='Indonesian Rupiah'>IDR: Indonesian Rupiah</option>
+                <option value='ILS' title='Israeli New Sheqel'>ILS: Israeli New Sheqel</option>
+                <option value='INR' title='Indian Rupee'>INR: Indian Rupee</option>
+                <option value='JPY' title='Japanese Yen'>JPY: Japanese Yen</option>
+                <option value='KRW' title='South Korean Won'>KRW: South Korean Won</option>
+                <option value='MXN' title='Mexican Peso'>MXN: Mexican Peso</option>
+                <option value='MYR' title='Malaysian Ringgit'>MYR: Malaysian Ringgit'</option>
+                <option value='NOK' title='Norwegian Krone'>NOK: Norwegian Krone</option>
+                <option value='NZD' title='New Zealand Dollar'>NZD: New Zealand Dollar</option>
+                <option value='PHP' title='Philippine Peso'>PHP: Philippine Peso</option>
+                <option value='PLN' title='Polish Zloty'>PLN: Polish Zloty</option>
+                <option value='RUB' title='Russian Ruble'>RUB: Russian Ruble</option>
+                <option value='SEK' title='Swedish Krona'>SEK: Swedish Krona</option>
+                <option value='SGD' title='Singapore Dollar'>SGD: Singapore Dollar</option>
+                <option value='THB' title='Thai Baht'>THB: Thai Baht</option>
+                <option value='TRY' title='Turkish Lira'>TRY: Turkish Lira</option>
+                <option value='USD' title='United States Dollar'>USD: United States Dollar</option>
+                <option value='ZAR' title='South African Rand'>ZAR: South African Rand</option>
+            </select>
+        </div>
 
-    <div class="out">
-        <input id="toAmount" type="text" disabled>
-        <select id="to">
-            <option value='AUD' title='Australian Dollar'>AUD: Australian Dollar</option>
-            <option value='BGN' title='Bulgarian lev'>BGN: Bulgarian lev</option>
-            <option value='BRL' title='Brazilian real'>BRL: Braxilian real</option>
-            <option value='CAD' title='Canadian Dollar'>CAD: Canadian Dollar</option>
-            <option value='CHF' title='Swiss franc'>CHF: Swiss franc</option>
-            <option value='CNY' title='Chinese yuan'>CNY: Chinese yuan renminbi</option>
-            <option value='CZK' title='Czech Republic Koruna'>CZK: Czech Republic Koruna</option>
-            <option value='DKK' title='Danish Krone'>DKK: Danish Krone</option>
-            <option value='GBP' title='British Pound Sterling'>GBP: British Pound Sterling</option>
-            <option value='EUR' title='Euro'>EUR: Euro</option>
-            <option value='HKD' title='Hong Kong Dollar'>HKD: Hong Kong Dollar</option>
-            <option value='HRK' title='Croatian Kuna'>HRK: Croatian Kuna</option>
-            <option value='HUF' title='Hungarian Forint'>HUF: Hungarian Forint</option>
-            <option value='IDR' title='Indonesian Rupiah'>IDR: Indonesian Rupiah</option>
-            <option value='ILS' title='Israeli New Sheqel'>ILS: Israeli New Sheqel</option>
-            <option value='INR' title='Indian Rupee'>INR: Indian Rupee</option>
-            <option value='JPY' title='Japanese Yen'>JPY: Japanese Yen</option>
-            <option value='KRW' title='South Korean Won'>KRW: South Korean Won</option>
-            <option value='MXN' title='Mexican Peso'>MXN: Mexican Peso</option>
-            <option value='MYR' title='Malaysian Ringgit'>MYR: Malaysian Ringgit'</option>
-            <option value='NOK' title='Norwegian Krone'>NOK: Norwegian Krone</option>
-            <option value='NZD' title='New Zealand Dollar'>NZD: New Zealand Dollar</option>
-            <option value='PHP' title='Philippine Peso'>PHP: Philippine Peso</option>
-            <option value='PLN' title='Polish Zloty'>PLN: Polish Zloty</option>
-            <option value='RUB' title='Russian Ruble'>RUB: Russian Ruble</option>
-            <option value='SEK' title='Swedish Krona'>SEK: Swedish Krona</option>
-            <option value='SGD' title='Singapore Dollar'>SGD: Singapore Dollar</option>
-            <option value='THB' title='Thai Baht'>THB: Thai Baht</option>
-            <option value='TRY' title='Turkish Lira'>TRY: Turkish Lira</option>
-            <option value='USD' title='United States Dollar' selected>USD: United States Dollar</option>
-            <option value='ZAR' title='South African Rand'>ZAR: South African Rand</option>
-        </select>
-        <button id="submit">Submit</button>
- </div>
-        <div class="userRate">
-            <div id="userChoice"></div>
-            <div id="userUs"></div>
-            <div id="userEur"></div>
-        
+        <div class="out">
+            <input id="toAmount" type="text" disabled>
+            <select id="to">
+                <option value='AUD' title='Australian Dollar'>AUD: Australian Dollar</option>
+                <option value='BGN' title='Bulgarian lev'>BGN: Bulgarian lev</option>
+                <option value='BRL' title='Brazilian real'>BRL: Braxilian real</option>
+                <option value='CAD' title='Canadian Dollar'>CAD: Canadian Dollar</option>
+                <option value='CHF' title='Swiss franc'>CHF: Swiss franc</option>
+                <option value='CNY' title='Chinese yuan'>CNY: Chinese yuan renminbi</option>
+                <option value='CZK' title='Czech Republic Koruna'>CZK: Czech Republic Koruna</option>
+                <option value='DKK' title='Danish Krone'>DKK: Danish Krone</option>
+                <option value='GBP' title='British Pound Sterling'>GBP: British Pound Sterling</option>
+                <option value='EUR' title='Euro'>EUR: Euro</option>
+                <option value='HKD' title='Hong Kong Dollar'>HKD: Hong Kong Dollar</option>
+                <option value='HRK' title='Croatian Kuna'>HRK: Croatian Kuna</option>
+                <option value='HUF' title='Hungarian Forint'>HUF: Hungarian Forint</option>
+                <option value='IDR' title='Indonesian Rupiah'>IDR: Indonesian Rupiah</option>
+                <option value='ILS' title='Israeli New Sheqel'>ILS: Israeli New Sheqel</option>
+                <option value='INR' title='Indian Rupee'>INR: Indian Rupee</option>
+                <option value='JPY' title='Japanese Yen'>JPY: Japanese Yen</option>
+                <option value='KRW' title='South Korean Won'>KRW: South Korean Won</option>
+                <option value='MXN' title='Mexican Peso'>MXN: Mexican Peso</option>
+                <option value='MYR' title='Malaysian Ringgit'>MYR: Malaysian Ringgit'</option>
+                <option value='NOK' title='Norwegian Krone'>NOK: Norwegian Krone</option>
+                <option value='NZD' title='New Zealand Dollar'>NZD: New Zealand Dollar</option>
+                <option value='PHP' title='Philippine Peso'>PHP: Philippine Peso</option>
+                <option value='PLN' title='Polish Zloty'>PLN: Polish Zloty</option>
+                <option value='RUB' title='Russian Ruble'>RUB: Russian Ruble</option>
+                <option value='SEK' title='Swedish Krona'>SEK: Swedish Krona</option>
+                <option value='SGD' title='Singapore Dollar'>SGD: Singapore Dollar</option>
+                <option value='THB' title='Thai Baht'>THB: Thai Baht</option>
+                <option value='TRY' title='Turkish Lira'>TRY: Turkish Lira</option>
+                <option value='USD' title='United States Dollar' selected>USD: United States Dollar</option>
+                <option value='ZAR' title='South African Rand'>ZAR: South African Rand</option>
+            </select>
+            
         </div>
-        
-        
-</div>
-    <div class="theRate">
-        <div class="poundRate">
-            <div class="pound"> 1 GBP = </div>
-            <div id="dollar">dollar</div>
-            <div id="euro"></div>
-        
-        </div>
-    
-    
+        <div class="submit">
+            <button id="submit">Submit</button>
+        </div> 
     </div>
+        
+        <div class="table">
+            <div class="divTableRow">
+                <div class="divTableCell" id="userChoice"></div>
+                <div class="divTableCell"><i class="fa fa-exchange" aria-hidden="true"></i></div>
+                <div class="divTableCell" id="userUs"></div>
+                <div class="divTableCell"><i class="fa fa-exchange" aria-hidden="true"></i></div>
+                <div class="divTableCell" id="userEur"></div>
+            </div>
+        </div>
+    
+    <div class="w">
+        <h2>Other Exchanges Rates</h2>
+            <div class="pound">
+                <div class="boxText"> 1 GBP </div>
+                <div class="boxText" id="dollar"></div>
+                <div class="boxText" id="euro"></div>
+            </div>
+        </div>
 
 </body>
+    
 <script src="currencies.js"></script>
-
 
 </html>

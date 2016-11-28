@@ -1,0 +1,235 @@
+html {}
+body {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+body::after {
+    content: "";
+    background: url(euroCoins.jpg) center scroll;
+    opacity: 0.5;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+p {}
+h1 {}
+.title {
+    max-width: 100%;
+    height: auto;
+    padding: 40px;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    background-color: #1057CA;
+}
+.UserExchange {
+    text-align: center;
+    background-color: ;
+}
+#fromAmount,
+#toAmount {
+    padding: 10px 5px 10px 5px;
+    font-size: 26px;
+    border: 1px solid black;
+}
+#from,
+#to {
+    font-family: 'Work Sans', sans-serif;
+    color: black;
+    padding: 10px 5px 10px 5px;
+    font-size: 26px;
+    width: 90px;
+}
+input {
+    overflow: hidden;
+}
+input:focus {
+    outline: none !important;
+    box-shadow: 0 0 10px lightblue;
+    -moz-box-shadow: 0 0 10px #1057CA;
+    -webkit-box-shadow: 0 0 10px #1057CA;
+}
+.to {
+    max-width: 50%;
+    display: inline-block;
+    background-color: ;
+    padding: 20px;
+    margin: auto;
+}
+.out {
+    max-width: 50%;
+    display: inline-block;
+    background-color: ;
+    padding: 20px;
+    margin: auto;
+}
+.submit {
+    margin: auto;
+    padding: 20px;
+}
+#submit {
+    width: 200px;
+    height: 50px;
+    background-color: #fff;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bolder;
+    color: #1057CA;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 3px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+#submit:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    color: #000;
+}
+.table {
+    display: table;
+    margin: auto;
+    font-size: 24px
+}
+.divTableRow {
+    display: table-row;
+    width: 100%;
+}
+.divTableCell {
+    display: table-cell;
+    text-align: center;
+    color: #1057CA;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+i {}
+.OtherExchangeRates {
+    margin: auto;
+    max-width: 50%;
+    text-align: center;
+}
+.pound {
+    display: inline-block;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    border: 1px solid black;
+    padding: 10px;
+}
+.boxText {
+    padding: 5px;
+}
+
+/* -----------------------------media quiers-------------- */
+
+@media only screen and (max-width: 841px) {
+    .to,
+    .out {
+        display: block;
+        max-width: 100%;
+    }
+    #from,
+    #to {
+        display: block;
+        max-width: 100%;
+        text-align: center;
+        margin: auto;
+    }
+    
+    .title {
+        padding: 30px;
+    }
+}
+
+/* iPhone 6+ ----------- */
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) {
+    .title {
+        padding: 20px;
+    }
+    #from,
+    #to {
+        padding: 5px 5px;
+     
+    }
+    .divTableCell {
+        display: table-cell;
+        text-align: center;
+        color: #1057CA;
+        padding: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+/* iphone 6  (portrait) ----------- */
+
+@media only screen and (max-width: 375px) {
+        .title {
+        padding: 10px;
+    }
+    #from,
+    #to {
+        padding: 5px 5px;
+        font-size: 15px;
+        width: 180px;
+    }
+    
+    .out, .to {
+        padding: 10px;
+    }
+    .divTableCell {
+        display: table-cell;
+        text-align: center;
+        color: #1057CA;
+        font-size: 20px;
+        padding: 2px;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+    .OtherExchangeRates {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+          .title {
+              padding: 5px;
+              font-size: 1em;
+    }
+    #fromAmount,
+#toAmount {
+    padding: 5px 5px;
+    font-size: 18px;
+    
+}
+    .submit {
+        padding: 5px;
+    }
+    #submit {
+        width: 100px;
+        margin: 0px;
+        padding: 0px;
+    }
+ 
+        
+    }
+}

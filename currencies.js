@@ -28,6 +28,7 @@ function gbpRate() {
 
 function start() {
     document.getElementById("submit").addEventListener("click", loadData, false);
+    ;
 }
 
 function loadData() {
@@ -60,7 +61,7 @@ function loadData() {
             document.getElementById("toAmount").value = calculation;
 
             //other curreny rate
-            document.getElementById("userChoice").innerHTML = "1 " + fromCurr + " = ";
+            document.getElementById("userChoice").innerHTML = "1 " + fromCurr;
             
             console.log(UserEur);
             
@@ -80,8 +81,20 @@ function loadData() {
     };
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
+    
+    appear();
 
   
 };
 
+/* hide the div table until onclick event*/
+$(function() {
+    $('i').hide();
+});
+
+function appear() {  
+$('body').on("click", function() {
+    $('i').show();
+});
+};
 
