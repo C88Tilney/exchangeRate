@@ -11,11 +11,11 @@ function gbpRate() {
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var gbp = JSON.parse(this.responseText);
-            console.log(gbp);
+            //console.log(gbp);
             
             var usd = gbp.rates.USD;
             var eur = gbp.rates.EUR;
-            console.log(eur);
+            //console.log(eur);
             document.getElementById("dollar").innerHTML = usd +" USD";
             document.getElementById("euro").innerHTML = eur + " EUR";
         }
@@ -34,11 +34,11 @@ function start() {
 function loadData() {
     var toCurr = document.getElementById("to").value;
     var fromAmount = parseInt(document.getElementById("fromAmount").value);
-    console.log(fromAmount);
+    //console.log(fromAmount);
 
     var fromCurr = document.getElementById("from").value;
-    console.log(fromCurr);
-    console.log(toCurr);
+    //console.log(fromCurr);
+    //console.log(toCurr);
 
     var xmlhttp = new XMLHttpRequest();
     var url = "http://api.fixer.io/latest?base=" + fromCurr;
@@ -46,24 +46,24 @@ function loadData() {
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             var myArr = JSON.parse(this.responseText);
-            console.log(myArr);
+            //console.log(myArr);
             myFunction(myArr);
         }
 
         function myFunction(arr) {
             var dis = myArr.rates[toCurr];
-            console.log(dis);
+            //console.log(dis);
             var calculation = dis * fromAmount;
             var UserUsd = myArr.rates.USD;
             var UserEur = myArr.rates.EUR;
             var UserGbp = myArr.rates.GBP;
-            console.log(calculation);
+            //console.log(calculation);
             document.getElementById("toAmount").value = calculation;
 
             //other curreny rate
             document.getElementById("userChoice").innerHTML = "1 " + fromCurr;
             
-            console.log(UserEur);
+            //console.log(UserEur);
             
             if( fromCurr == "USD" ) {
                 document.getElementById("userUs").innerHTML =  UserGbp + " GBP";

@@ -161,7 +161,7 @@ i {}
 
 /* iPhone 6+ ----------- */
 
-@media only screen and (min-device-width: 414px) and (max-device-height: 736px) {
+@media only screen and (min-device-width: 376px) and (max-device-height: 736px) {
     .title {
         padding: 20px;
     }
@@ -215,8 +215,9 @@ i {}
               padding: 5px;
               font-size: 1em;
     }
+    
     #fromAmount,
-#toAmount {
+    #toAmount {
     padding: 5px 5px;
     font-size: 18px;
     
@@ -230,6 +231,4 @@ i {}
         padding: 0px;
     }
  
-        
-    }
 }

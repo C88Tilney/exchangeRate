@@ -14,8 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- google fonts and icons -->
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- jQuery -->
@@ -100,34 +99,33 @@
                 <option value='USD' title='United States Dollar' selected>USD: United States Dollar</option>
                 <option value='ZAR' title='South African Rand'>ZAR: South African Rand</option>
             </select>
-            
+
         </div>
         <div class="submit">
             <button id="submit">Submit</button>
-        </div> 
+        </div>
     </div>
-        
-        <div class="table">
-            <div class="divTableRow">
-                <div class="divTableCell" id="userChoice"></div>
-                <div class="divTableCell"><i class="fa fa-exchange" aria-hidden="true"></i></div>
-                <div class="divTableCell" id="userUs"></div>
-                <div class="divTableCell"><i class="fa fa-exchange" aria-hidden="true"></i></div>
-                <div class="divTableCell" id="userEur"></div>
-            </div>
-        </div>
-    
-    <div class="w">
-        <h2>Other Exchanges Rates</h2>
-            <div class="pound">
-                <div class="boxText"> 1 GBP </div>
-                <div class="boxText" id="dollar"></div>
-                <div class="boxText" id="euro"></div>
-            </div>
-        </div>
 
+    <div class="table">
+        <div class="divTableRow">
+            <div class="divTableCell" id="userChoice"></div>
+            <div class="divTableCell"><i class="fa fa-exchange" aria-hidden="true"></i></div>
+            <div class="divTableCell" id="userUs"></div>
+            <div class="divTableCell"><i class="fa fa-exchange" aria-hidden="true"></i></div>
+            <div class="divTableCell" id="userEur"></div>
+        </div>
+    </div>
+
+    <div class="OtherExchangeRates">
+        <h2>Other Exchanges Rates</h2>
+        <div class="pound">
+            <div class="boxText"> 1 GBP </div>
+            <div class="boxText" id="dollar"></div>
+            <div class="boxText" id="euro"></div>
+        </div>
+    </div>
+
+    <script src="currencies.js"></script>
 </body>
-    
-<script src="currencies.js"></script>
 
 </html>
