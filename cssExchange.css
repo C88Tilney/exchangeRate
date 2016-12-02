@@ -41,6 +41,12 @@ h1 {}
     font-size: 26px;
     border: 1px solid black;
 }
+
+/* stop firefox blue shading */ 
+select {
+    -moz-appearance: caret;       
+}
+
 #from,
 #to {
     font-family: 'Work Sans', sans-serif;
@@ -170,6 +176,11 @@ i {}
         padding: 5px 5px;
      
     }
+    .from,
+    .out {
+        padding: 5px 5px;
+     
+    }
     .divTableCell {
         display: table-cell;
         text-align: center;
@@ -177,6 +188,13 @@ i {}
         padding: 2px;
         padding-left: 5px;
         padding-right: 5px;
+    }
+    .submit {
+        padding: 10px;
+    }
+    
+    .otherExchangeRates {
+        padding: auto;
     }
 }
 
@@ -210,6 +228,8 @@ i {}
     }
 }
 
+/* iphone 5 and smaller ----------------- */
+
 @media only screen and (max-width: 320px) {
           .title {
               padding: 5px;
@@ -232,3 +252,5 @@ i {}
     }
  
 }
+
+
